@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jackpot</title>
+    <!---styles --->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/mainstyle.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <link href="https://unpkg.com/aos@2.3.0/dist/aos.css" rel="stylesheet" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
+      integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+  
+    <header class="header-area">
+      <!-- site-navbar start -->
+      <div class="navbar-area">
+        <div class="container">
+          <nav class="site-navbar">
+            <!-- site logo -->
+            <div class="logo-and-nav">
+              <a href="#home" class="site-logo"
+                ><img src="assets/images/logo.png" alt=""
+              /></a>
+
+              <!-- site menu/nav -->
+              <ul class="main-nav">
+                <li><a href="#">Leaderboard</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Whitepaper </a></li>
+                
+              </ul>
+            </div>
+            <!-- site search -->
+            <ul class="logins">
+              <li class="sign-in"><a href="">Sign in</a></li>
+              <li><a href="">Add to Discord</a></li>
+            </ul>
+            <!-- nav-toggler for mobile version only -->
+            <button class="nav-toggler">
+              <span></span>
+            </button>
+          </nav>
+        </div>
+      </div>
+      <!-- navbar-area end -->
+    </header>
+
+    <!--Main header-->
+    <section class="title-count">
+      <div class="container">
+        <div class="counter-cuz-row">
+          <div class="counter-card counter-side-left">
+            <img class="img-fluid" src="assets/images/crown.png" alt="" />
+            <h2>Time Until Raffle</h2>
+            <div class="counter-num-side">
+              <h4>2,500 USDC</h4>
+            </div>
+          </div>
+          <div class="counter-card-center counter-center">
+            <img class="img-fluid" src="assets/images/crown.png" alt="" />
+            <h2>Time Until Raffle</h2>
+            <div class="counter-num">
+              <span class="span-wrapper"
+                >24
+                <p>Days</p></span
+              ><span class="span-wrapper"
+                >04
+                <p>Hours</p></span
+              ><span class="span-wrapper"
+                >45
+                <p>Minute</p></span
+              ><span class="span-wrapper"
+                >12
+                <p>Second</p></span
+              >
+            </div>
+          </div>
+          <div class="counter-card counter-side-left responsive-count">
+            <img class="img-fluid" src="assets/images/crown.png" alt="" />
+            <h2>Time Until Raffle</h2>
+            <div class="counter-num-side">
+              <h4>7</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Main header end-->
+    <!--Main table-->
+    <section class="main-table-card">
+      <div class="container">
+        <!--Filter-->
+        <div class="sub-head">
+          <h3>Leaderbox</h3>
+       
+       
+          <i onclick="onOpenFilter()" class="fa fa-filter"></i> 
+        
+       
+        </div>
+        <div id="activeFilter" class="filter" style="display: none;">
+          <div class="fil-cus-row">
+            <div class="custom-filter-card main-filter-box toggle-wrapper">
+              <p>Members</p>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+              <p class="actived-checked">Community</p>
+            </div>
+            <div class="custom-filter-card main-filter-box toggle-wrapper">
+              <p>All-Time</p>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+              <p>Community</p>
+            </div>
+            <div class="custom-filter-card-drop-down main-filter-box " >
+              <div class="dropdown" data-control="checkbox-dropdown">
+                <label class="dropdown-label ">Community</label>
+
+                <div class="dropdown-list  ">
+                  <h5>Filter by Community</h5>
+
+
+                  <div class="search-filter">
+                    <input type="text" placeholder="search" class="form-control">
+                  </div>
+                  <!-- <a href="#" data-toggle="check-all" class="dropdown-option">
+                    Check All
+                  </a> -->
+
+                  <label class="dropdown-option">
+                    <input
+                      type="checkbox"
+                      name="dropdown-group"
+                      value="Selection 1"
+                    />
+                    All
+                  </label>
+
+                  <label class="dropdown-option">
+                    <input
+                      type="checkbox"
+                      name="dropdown-group"
+                      value="Selection 2"
+                    />
+                    Pudgy Penguins
+                  </label>
+
+                  <label class="dropdown-option">
+                    <input
+                      type="checkbox"
+                      name="dropdown-group"
+                      value="Selection 3"
+                    />
+                    Genuine Undead
+                  </label>
+
+                  <label class="dropdown-option">
+                    <input
+                      type="checkbox"
+                      name="dropdown-group"
+                      value="Selection 4"
+                    />
+                    Doodles
+                  </label>
+
+                  <label class="dropdown-option">
+                    <input
+                      type="checkbox"
+                      name="dropdown-group"
+                      value="Selection 5"
+                    />
+                    DeGods
+                  </label>
+                  <button class="btn-filter"> Apply Filter</button>
+                </div>
+              </div>
+            </div>
+            <div class="custom-filter-card-drop-down main-filter-box">
+              <div class="dropdown" data-control="checkbox-dropdown">
+                <label class="dropdown-label"> Community</label>
+
+                <div class="dropdown-list">
+                  <!-- <a href="#" data-toggle="check-all" class="dropdown-option">
+                    Check All
+                  </a> -->
+
+                  <label class="dropdown-option">
+                    <input
+                      type="checkbox"
+                      name="dropdown-group"
+                      value="Selection 1"
+                    />
+                    Community
+                  </label>
+
+                  <label class="dropdown-option">
+                    <input
+                      type="checkbox"
+                      name="dropdown-group"
+                      value="Selection 2"
+                    />
+                    Selection Two
+                  </label>
+
+                  <label class="dropdown-option">
+                    <input
+                      type="checkbox"
+                      name="dropdown-group"
+                      value="Selection 3"
+                    />
+                    Selection Three
+                  </label>
+
+                  <label class="dropdown-option">
+                    <input
+                      type="checkbox"
+                      name="dropdown-group"
+                      value="Selection 4"
+                    />
+                    Selection Four
+                  </label>
+
+                  <label class="dropdown-option">
+                    <input
+                      type="checkbox"
+                      name="dropdown-group"
+                      value="Selection 5"
+                    />
+                    Selection Five
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="custom-filter-card-drop-down-search main-filter-box">
+              <input type="text" />
+              <button>Search</button>
+            </div>
+          </div>
+        </div>
+        <!--Filter end-->
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Rank</th>
+              <th scope="col">User</th>
+              <th scope="col">XP</th>
+              
+              <th scope="col " class="community">Community</th>
+              <th scope="col " class="twiter">Twitter</th>
+              <th class="onMobileTh" scope="col" ></th>
+           
+            </tr>
+          </thead>
+          <tbody>
+            <!--- Table 1 --->
+            <tr>
+              <div>
+                <th scope="row" class="th-up"><img class="img-fluid" src="assets/images/up-green.png" alt=""></th>
+                <td>1</td>
+                <td class="profile-name-td">
+                  <div class="avatar-box">
+                    <img
+                      class="img-fluid"
+                      src="assets/images/avatar.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>Andrew Epprecht</div>
+                </td>
+                <td class="xp">
+                  725,324,908 <i class="fa fa-ticket" aria-hidden="true"></i>
+                </td>
+                <td class="profile-name-td community">
+                  <div class="avatar-box">
+                    <img
+                      class="img-fluid"
+                      src="assets/images/NFT_sticker.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>@bfocha#2802</div>
+                </td>
+                <td class="twiter">
+                  @bfocha_1 <i class="fa fa-share" aria-hidden="true"></i>
+                </td>
+             
+                <td class="accordion-header" id="flush-headingOne">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                  <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                  </button>
+                  <div>
+                    <tr
+                      id="flush-collapseOne"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <td class="ul-child" colspan="6">
+                        <ul>
+                          <li>
+                            <div class="rating-mobile">
+                              <div class="star-icon-mob">
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="main-mob-avatar">
+                              <div class="avatar-box">
+                                <img
+                                  class="img-fluid"
+                                  src="assets/images/NFT_sticker.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div>@bfocha#2802</div>
+                            </div>
+                          </li>
+
+                          <li><i class="fab fa-twitter mr-2"></i></li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </div>
+                </td>
+              </div>
+            </tr>
+            <!--- Table 2 --->
+            <tr>
+              <div>
+                <th scope="row" class="th-up"><img class="img-fluid" src="assets/images/down-red.png" alt=""></th>
+                <td>2</td>
+                <td class="profile-name-td">
+                  <div class="avatar-box">
+                    <img
+                      class="img-fluid"
+                      src="assets/images/avatar.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>Andrew Epprecht</div>
+                </td>
+                <td class="xp">
+                  725,324,908 <i class="fa fa-ticket" aria-hidden="true"></i>
+                </td>
+                <td class="profile-name-td community">
+                  <div class="avatar-box">
+                    <img
+                      class="img-fluid"
+                      src="assets/images/NFT_sticker.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>@bfocha#2802</div>
+                </td>
+                <td class="twiter">
+                  @bfocha_1 <i class="fa fa-share" aria-hidden="true"></i>
+                </td>
+                <td class="accordion-header" id="flush-headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                  <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                  </button>
+                  <div>
+                    <tr
+                      id="flush-collapseTwo"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-headingTwo"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <td class="ul-child" colspan="6">
+                        <ul>
+                          <li>
+                            <div class="rating-mobile">
+                              <div class="star-icon-mob">
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="main-mob-avatar">
+                              <div class="avatar-box">
+                                <img
+                                  class="img-fluid"
+                                  src="assets/images/NFT_sticker.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div>@bfocha#2802</div>
+                            </div>
+                          </li>
+
+                         <li><i class="fab fa-twitter mr-2"></i></li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </div>
+                </td>
+              </div>
+            </tr>
+            <!--- Table 3 --->
+            <!--- Table 2 --->
+            <tr>
+              <div>
+                <th scope="row" class="th-up"><img class="img-fluid" src="assets/images/up-green.png" alt=""></th>
+                <td>3</td>
+                <td class="profile-name-td">
+                  <div class="avatar-box">
+                    <img
+                      class="img-fluid"
+                      src="assets/images/avatar.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>Andrew Epprecht</div>
+                </td>
+                <td class="xp">
+                  725,324,908 <i class="fa fa-ticket" aria-hidden="true"></i>
+                </td>
+                <td class="profile-name-td community">
+                  <div class="avatar-box">
+                    <img
+                      class="img-fluid"
+                      src="assets/images/NFT_sticker.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>@bfocha#2802</div>
+                </td>
+                <td class="twiter">
+                  @bfocha_1 <i class="fa fa-share" aria-hidden="true"></i>
+                </td>
+                <td class="accordion-header" id="flush-headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                  <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                  </button>
+                  <div>
+                    <tr
+                      id="flush-collapseThree"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-headingThree"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <td class="ul-child" colspan="6">
+                        <ul>
+                          <li>
+                            <div class="rating-mobile">
+                              <div class="star-icon-mob">
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="main-mob-avatar">
+                              <div class="avatar-box">
+                                <img
+                                  class="img-fluid"
+                                  src="assets/images/NFT_sticker.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div>@bfocha#2802</div>
+                            </div>
+                          </li>
+
+                         <li><i class="fab fa-twitter mr-2"></i></li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </div>
+                </td>
+              </div>
+            </tr>
+            <!--- Table 3 --->
+            <!--- Table 2 --->
+            <tr>
+              <div>
+                <th scope="row" class="th-up"><img class="img-fluid" src="assets/images/up-green.png" alt=""></th>
+                <td>4</td>
+                <td class="profile-name-td">
+                  <div class="avatar-box">
+                    <img
+                      class="img-fluid"
+                      src="assets/images/avatar.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>Andrew Epprecht</div>
+                </td>
+                <td class="xp">
+                  725,324,908 <i class="fa fa-ticket" aria-hidden="true"></i>
+                </td>
+                <td class="profile-name-td community">
+                  <div class="avatar-box">
+                    <img
+                      class="img-fluid"
+                      src="assets/images/NFT_sticker.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>@bfocha#2802</div>
+                </td>
+                <td class="twiter">
+                  @bfocha_1 <i class="fa fa-share" aria-hidden="true"></i>
+                </td>
+                <td class="accordion-header" id="flush-headingFour">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFour"
+                  >
+                  <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                  </button>
+                  <div>
+                    <tr
+                      id="flush-collapseFour"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-headingFour"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <td class="ul-child" colspan="6">
+                        <ul>
+                          <li>
+                            <div class="rating-mobile">
+                              <div class="star-icon-mob">
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="main-mob-avatar">
+                              <div class="avatar-box">
+                                <img
+                                  class="img-fluid"
+                                  src="assets/images/NFT_sticker.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div>@bfocha#2802</div>
+                            </div>
+                          </li>
+
+                         <li><i class="fab fa-twitter mr-2"></i></li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </div>
+                </td>
+              </div>
+            </tr>
+            <!--- Table 3 --->
+           
+            <!--- Table 2 --->
+            <tr>
+              <div>
+                <th scope="row" class="th-up"><img class="img-fluid" src="assets/images/down-red.png" alt=""></th>
+                <td>5</td>
+                <td class="profile-name-td">
+                  <div class="avatar-box">
+                    <img
+                      class="img-fluid"
+                      src="assets/images/avatar.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>Andrew Epprecht</div>
+                </td>
+                <td class="xp">
+                  725,324,908 <i class="fa fa-ticket" aria-hidden="true"></i>
+                </td>
+                <td class="profile-name-td community">
+                  <div class="avatar-box">
+                    <img
+                      class="img-fluid"
+                      src="assets/images/NFT_sticker.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>@bfocha#2802</div>
+                </td>
+                <td class="twiter">
+                  @bfocha_1 <i class="fa fa-share" aria-hidden="true"></i>
+                </td>
+                <td class="accordion-header" id="flush-headingFive">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFive"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFive"
+                  >
+                  <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                  </button>
+                  <div>
+                    <tr
+                      id="flush-collapseFiver"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-headingFive"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <td class="ul-child" colspan="6">
+                        <ul>
+                          <li>
+                            <div class="rating-mobile">
+                              <div class="star-icon-mob">
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="main-mob-avatar">
+                              <div class="avatar-box">
+                                <img
+                                  class="img-fluid"
+                                  src="assets/images/NFT_sticker.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div>@bfocha#2802</div>
+                            </div>
+                          </li>
+
+                         <li><i class="fab fa-twitter mr-2"></i></li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </div>
+                </td>
+              </div>
+            </tr>
+            <!--- Table 3 --->
+          <!--- Table 2 --->
+          <tr>
+            <div>
+              <th scope="row" class="th-up"><img class="img-fluid" src="assets/images/up-green.png" alt=""></th>
+              <td>6</td>
+              <td class="profile-name-td">
+                <div class="avatar-box">
+                  <img
+                    class="img-fluid"
+                    src="assets/images/avatar.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>Andrew Epprecht</div>
+              </td>
+              <td class="xp">
+                725,324,908 <i class="fa fa-ticket" aria-hidden="true"></i>
+              </td>
+              <td class="profile-name-td community">
+                <div class="avatar-box">
+                  <img
+                    class="img-fluid"
+                    src="assets/images/NFT_sticker.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>@bfocha#2802</div>
+              </td>
+              <td class="twiter">
+                @bfocha_1 <i class="fa fa-share" aria-hidden="true"></i>
+              </td>
+              <td class="accordion-header" id="flush-headingSix">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSix"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseSix"
+                >
+                <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                </button>
+                <div>
+                  <tr
+                    id="flush-collapseSix"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingSix"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <td class="ul-child" colspan="6">
+                      <ul>
+                        <li>
+                          <div class="rating-mobile">
+                            <div class="star-icon-mob">
+                              <i
+                                class="fa fa-certificate"
+                                aria-hidden="true"
+                              ></i>
+                              <i
+                                class="fa fa-certificate"
+                                aria-hidden="true"
+                              ></i>
+                              <i
+                                class="fa fa-certificate"
+                                aria-hidden="true"
+                              ></i>
+                              <i
+                                class="fa fa-certificate"
+                                aria-hidden="true"
+                              ></i>
+                              <i
+                                class="fa fa-certificate"
+                                aria-hidden="true"
+                              ></i>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="main-mob-avatar">
+                            <div class="avatar-box">
+                              <img
+                                class="img-fluid"
+                                src="assets/images/NFT_sticker.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div>@bfocha#2802</div>
+                          </div>
+                        </li>
+
+                       <li><i class="fab fa-twitter mr-2"></i></li>
+                      </ul>
+                    </td>
+                  </tr>
+                </div>
+              </td>
+            </div>
+          </tr>
+          <!--- Table 3 --->
+            <!--- Table 2 --->
+            <tr>
+              <div>
+                <th scope="row" class="th-up"><img class="img-fluid" src="assets/images/down-red.png" alt=""></th>
+                <td>7</td>
+                <td class="profile-name-td">
+                  <div class="avatar-box">
+                    <img
+                      class="img-fluid"
+                      src="assets/images/avatar.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>Andrew Epprecht</div>
+                </td>
+                <td class="xp">
+                  725,324,908 <i class="fa fa-ticket" aria-hidden="true"></i>
+                </td>
+                <td class="profile-name-td community">
+                  <div class="avatar-box">
+                    <img
+                      class="img-fluid"
+                      src="assets/images/NFT_sticker.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>@bfocha#2802</div>
+                </td>
+                <td class="twiter">
+                  @bfocha_1 <i class="fa fa-share" aria-hidden="true"></i>
+                </td>
+                <td class="accordion-header" id="flush-headingSeven">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseSeven"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseSeven"
+                  >
+                  <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                  </button>
+                  <div>
+                    <tr
+                      id="flush-collapseSeven"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="flush-headingSeven"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <td class="ul-child" colspan="6">
+                        <ul>
+                          <li>
+                            <div class="rating-mobile">
+                              <div class="star-icon-mob">
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                                <i
+                                  class="fa fa-certificate"
+                                  aria-hidden="true"
+                                ></i>
+                              </div>
+                            </div>
+                          </li>
+  
+                          <li>
+                            <div class="main-mob-avatar">
+                              <div class="avatar-box">
+                                <img
+                                  class="img-fluid"
+                                  src="assets/images/NFT_sticker.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div>@bfocha#2802</div>
+                            </div>
+                          </li>
+  
+                         <li><i class="fab fa-twitter mr-2"></i></li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </div>
+                </td>
+              </div>
+            </tr>
+            <!--- Table 3 --->
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+    <div class="dir">
+      
+    </div>
+    <section class="footer">
+      <div class="container">
+        <div class="footer-wrapper">
+         <div class="logo-copy">
+          <img class="img-fluid" src="assets/images/footer-logo.png" alt="">
+          <p>© 2022 Copyright Jackpot. All Rights Reserved.</p>
+         </div>
+
+         <div class="social">
+          <ul>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Terms of Use</a></li>
+          </ul>
+         </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <!--- scripts --->
+
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="./assets/js/jquery.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./assets/js/aos.js"></script>
+
+  <script>
+    (function ($) {
+      var CheckboxDropdown = function (el) {
+        var _this = this;
+        this.isOpen = false;
+        this.areAllChecked = false;
+        this.$el = $(el);
+        this.$label = this.$el.find(".dropdown-label");
+        this.$checkAll = this.$el.find('[data-toggle="check-all"]').first();
+        this.$inputs = this.$el.find('[type="checkbox"]');
+
+        this.onCheckBox();
+
+        this.$label.on("click", function (e) {
+          e.preventDefault();
+          _this.toggleOpen();
+        });
+
+        this.$checkAll.on("click", function (e) {
+          e.preventDefault();
+          _this.onCheckAll();
+        });
+
+        this.$inputs.on("change", function (e) {
+          _this.onCheckBox();
+        });
+      };
+
+      CheckboxDropdown.prototype.onCheckBox = function () {
+        this.updateStatus();
+      };
+
+      CheckboxDropdown.prototype.updateStatus = function () {
+        var checked = this.$el.find(":checked");
+
+        this.areAllChecked = false;
+        this.$checkAll.html("Check All");
+
+        if (checked.length <= 0) {
+          this.$label.html("Select Options");
+        } else if (checked.length === 1) {
+          this.$label.html(checked.parent("label").text());
+        } else if (checked.length === this.$inputs.length) {
+          this.$label.html("All Selected");
+          this.areAllChecked = true;
+          this.$checkAll.html("Uncheck All");
+        } else {
+          this.$label.html(checked.length + " Selected");
+        }
+      };
+
+      CheckboxDropdown.prototype.onCheckAll = function (checkAll) {
+        if (!this.areAllChecked || checkAll) {
+          this.areAllChecked = true;
+          this.$checkAll.html("Uncheck All");
+          this.$inputs.prop("checked", true);
+        } else {
+          this.areAllChecked = false;
+          this.$checkAll.html("Check All");
+          this.$inputs.prop("checked", false);
+        }
+
+        this.updateStatus();
+      };
+
+      CheckboxDropdown.prototype.toggleOpen = function (forceOpen) {
+        var _this = this;
+
+        if (!this.isOpen || forceOpen) {
+          this.isOpen = true;
+          this.$el.addClass("on");
+          $(document).on("click", function (e) {
+            if (!$(e.target).closest("[data-control]").length) {
+              _this.toggleOpen();
+            }
+          });
+        } else {
+          this.isOpen = false;
+          this.$el.removeClass("on");
+          $(document).off("click");
+        }
+      };
+
+      var checkboxesDropdowns = document.querySelectorAll(
+        '[data-control="checkbox-dropdown"]'
+      );
+      for (var i = 0, length = checkboxesDropdowns.length; i < length; i++) {
+        new CheckboxDropdown(checkboxesDropdowns[i]);
+      }
+    })(jQuery);
+  </script>
+
+  <script>
+   
+  </script>
+</html>
